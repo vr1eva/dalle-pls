@@ -1,7 +1,7 @@
 {
-  "name": "npm init @figma&#x2F;widget",
+  "name": "dalle-pls",
   "version": "1.0.0",
-  "description": "npm init @figma&#x2F;widget",
+  "description": "Generate images on Figma using DALL-E 2",
   "scripts": {
     "test": "npm run tsc && npm run build",
     "format": "prettier --write .",
