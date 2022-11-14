@@ -23,14 +23,18 @@ function App() {
     setImageUrl(response.data.data[0].url ?? "https://res.cloudinary.com/dkzaozc1s/image/upload/v1668132359/undefined-url-wordpress_kcogv2.jpg")
   }
 
-  const addImageToCanvas = () => {}
+  const addImageToCanvas = () => { }
+
+  const handlePromptChange = (event) => {
+    setPrompt(event.target.value)
+  }
 
   return (
     <div className="App">
       <p>generate image from text</p>
       {imageUrl ? (<><button disabled onClick={addImageToCanvas}>add to canvas (coming soon)</button>
         <img src={imageUrl} alt="DALL-E image" /></>) : null}
-      <input type="text" placeholder="a dog with 2 faces" value={prompt} onChange={e => setPrompt(e.target.value)} />
+      <input type="text" placeholder="a dog with 2 faces" value={prompt} onChange={handlePromptChange} />
       <button
         disabled={loading}
         onClick={sendPrompt}
